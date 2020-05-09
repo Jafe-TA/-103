@@ -1,0 +1,35 @@
+<!--
+
+- Almacenar en un Set los días feriados del año actual. Guardar cada fecha con formato de tipo string: "día/mes/año"
+
+Ingresar por teclado una fecha cualquiera y luego verificar si dicha fecha es un feriado.
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<script>
+const feriados = new Set([
+    "1/1/2020",
+    "18/3/2020",
+    "27/2/2020",
+    "27/8/2020",
+    "25/12/2020"
+]);
+const dia = parseInt(prompt("Ingrese día:", ""));
+const mes = parseInt(prompt("Ingrese mes:", ""));
+const año = parseInt(prompt("Ingrese año:", ""));
+if (feriados.has(`${dia}/${mes}/${año}`))
+    document.write("La fecha es un dia feriado");
+else
+    document.write("La fechano  es un dia feriado");
+</script>
+</html>
+
+
